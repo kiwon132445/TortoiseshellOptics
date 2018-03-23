@@ -4,12 +4,11 @@ html {
   line-height:1.4;
   background-color:azure;
 }
-
-
+/*
 .border {
   border:1px solid black;
 }
-
+*/
 .container {
   max-width:960px;
   margin:0 auto;
@@ -40,8 +39,8 @@ html {
   overflow:hidden;
   color:white;
 }
-.headband .border {
-  padding:1rem 2rem;
+.headband{
+  padding:1rem 0 1rem 2rem;
 }
 .headband div {
   display:flex;
@@ -53,14 +52,19 @@ html {
   margin-right:1rem;
 }
 .navigation {
+  padding:0 1rem 0 0;
   display:flex;
   flex-direction:row;
+  justify-content:space-between;
   flex-wrap:wrap;
 }
-.navigation .products {
-  margin:0 2rem;
+.navigation li {
+  margin:0 1rem;
 }
 
+.mobile {
+  display:none;
+}
 
 /*Banner*/
 .outer {
@@ -77,6 +81,7 @@ html {
   font-size:2rem;
   line-height:1.2;
   font-weight:bold;
+  text-align:center;
 }
 
 
@@ -85,25 +90,34 @@ html {
   display:flex;
   flex-direction:row;
   justify-content:center;
-  height:8rem;
   margin:3rem auto;
 }
 .images {
+  height:8rem;
   display:flex;
   flex-direction:column;
   justify-content:space-between;
-  width:5rem;
   text-align:center;
+}
+.images span {
+  line-height:1.4
 }
 .paper, .ruler {
   margin-right:6rem;
 }
+.ruler, .truck {
+  width:5rem;
+}
 .ruler img, .truck img {
-  width:100%;
+  width:5rem;
+}
+.paper {
+  width:7rem;
 }
 .paper img {
   width:3.5rem;
 }
+
 
 
 /*Information*/
@@ -167,5 +181,67 @@ align-items:center;
     padding:1.25rem 4rem;
     font-size:1.33rem;
     line-height:1.4;
+  }
+}
+
+@media only screen and (max-width:480px) {
+  .back {
+    background-position:20%;
+  }
+  .desktop {
+    display:none;
+  }
+  .mobile {
+    display:contents;
+  }
+  .company span {
+    display:none;
+  }
+  .navigation {
+    padding-right:2rem;
+  }
+  .outer {
+    margin-left:0;
+    margin-top:9rem;
+    justify-content:center;
+  }
+  .banner {
+    width:480px;
+    padding:1rem 0;
+    margin:0;
+  }
+  .contents {
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:center;
+    margin:3.77rem auto;
+    font-size:0.77rem;
+  }
+  .paper, .ruler {
+    margin-right:0;
+    margin-bottom:1.54rem;
+  }
+  .details {
+    flex-direction:column;
+  }
+  .title {
+    padding-left:0;
+    text-align: center;
+  }
+  .info {
+    margin-bottom:4rem;
+  }
+  .info, .title {
+    width:100%;
+  }
+  .info p {
+    font-size:0.77rem;
+  }
+  .copyright span {
+    display:none;
+  }
+  .copyright {
+    justify-content:center;
+    margin-left:0;
   }
 }
